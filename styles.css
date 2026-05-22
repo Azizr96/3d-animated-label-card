@@ -1,0 +1,118 @@
+:root {
+
+    --bg-color: #f5f0e8;
+    --font-fam: playfair Display, serif;
+    --h1-col: #1a1410;
+    --h1-span: #c0783c;
+    --card-img: linear-gradient(135deg, #f5f2d0, #eeb10a);
+    --box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    --tag: #c0783c;
+    --back-name: #f5f0ed;
+    --back-desc: rgba(245,240,232,0.55);
+    --btn-txtcolor: #f5f0ed;
+    --btn-bgcolor: #c0783c;
+    --btn-hover: #a0622e;
+    --back-cardcolor: #1a1410;
+    --front-cardcolor: #fff;
+
+
+}
+
+
+
+* {
+box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+background-color: var(--bg-color);
+font-family: var(--font-fam);
+padding: 20px;
+}
+
+.title {
+    color: var(--h1-col);
+      text-align: center ;
+      font-size: 2.5rem;
+      margin: 40px;
+}
+
+.title span {
+    color: var(--h1-span);
+    font-style: italic;;
+  
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    perspective: 1000px;
+
+}
+
+.card-wrap {
+position: relative;
+width: 280px;
+height: 380px;
+transform-style: preserve-3d;
+transition: transform 0.7s ease-in-out;
+border-radius: 20px;
+
+box-shadow: var(--box-shadow);
+background: var(--front-cardcolor)
+
+}
+
+.front-card {
+    backface-visibility: hidden;
+}
+
+
+.back-card {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    backface-visibility: hidden;
+    transform: rotateY(-180deg)
+}
+
+.card-wrap:hover, .card-wrap:focus {
+    transform: rotateY(180deg);
+}
+
+.card-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 220px;
+    background: var(--card-img);
+    border-radius: 20px 20px 0 0;
+}
+ .img {
+font-size: 4rem;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--h1-col);
+    border-radius: 20px;
+    color: #fff;
+    padding: 8px 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem ;
+    letter-spacing: 1px;
+    
+}
