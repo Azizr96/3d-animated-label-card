@@ -6,7 +6,7 @@
     --h1-span: #c0783c;
     --card-img: linear-gradient(135deg, #f5f2d0, #eeb10a);
     --box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-    --tag: #c0783c;
+    --tag: #c57839;
     --back-name: #f5f0ed;
     --back-desc: rgba(245,240,232,0.55);
     --btn-txtcolor: #f5f0ed;
@@ -54,12 +54,17 @@ padding: 20px;
 
 }
 
+.card-outer {
+transform-style: preserve-3d;
+transition: transform 0.5s ease-in-out;
+    
+}
 .card-wrap {
 position: relative;
 width: 280px;
 height: 380px;
 transform-style: preserve-3d;
-transition: transform 0.7s ease-in-out;
+transition: transform 0.5s ease-in-out;
 border-radius: 20px;
 
 box-shadow: var(--box-shadow);
@@ -78,15 +83,17 @@ background: var(--front-cardcolor)
     left: 0;
     width: 100%;
     height: 100%;
-    
+    background-color:var(--back-cardcolor);
     backface-visibility: hidden;
-    transform: rotateY(-180deg)
+    transform: rotateY(-180deg);
+    border-radius: 20px;
 }
 
 .card-wrap:hover, .card-wrap:focus {
     transform: rotateY(180deg);
 }
 
+/* front card design */
 .card-img {
     display: flex;
     flex-direction: column;
@@ -108,11 +115,109 @@ font-size: 4rem;
     background: var(--h1-col);
     border-radius: 20px;
     color: #fff;
-    padding: 8px 20px;
+    padding: 8px 12px;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.8rem ;
     letter-spacing: 1px;
     
+}
+
+.front-descr {
+    margin-top: 10px
+}
+.tag {
+    color: var(--tag);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    padding-left: 20px;
+    
+}
+
+.product {
+    font-weight: normal;
+    padding-left: 20px;
+    font-size: 1.3rem;
+}
+
+.price {
+    padding: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+}
+
+.previous-price {
+    padding-left: 60px;
+    padding-bottom: 20px;
+    position: absolute;
+    bottom: 0;
+    color: grey;
+}
+
+/* back card description styling */
+
+.back-descr {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+
+}
+
+.tag1 {
+    color: var(--tag);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+}
+.back-product {
+    color: #fff;
+    font-weight: normal;
+    padding-top: 10px;
+
+}
+.description{
+    color: rgba(245,240,232,0.55);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    padding-top: 15px;
+}
+.descr-list {
+    color: rgba(245,240,232,0.55);
+    font-size: 0.8rem;
+    line-height: 2;
+    padding: 15px;
+
+}
+
+button {
+    background: var(--btn-bgcolor);
+    color: var(--btn-txtcolor);
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: none;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+transition: transform 0.2s; 
+}
+
+button:hover, button:focus {
+    color: var(--);
+    background: var(--btn-hover);
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.instruction {
+    text-align: center;
+    padding: 30px;
+    text-transform: uppercase;
+    color: gray;
+
 }
