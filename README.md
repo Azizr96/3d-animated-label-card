@@ -1,6 +1,6 @@
 # 3D Card flip project
 
-Project was designed to design complex animations while maintianing UI, accessibility and goo HTML semantics.
+Project was designed to design complex animations while maintianing UI, Accessibility and good HTML semantics.
 
 ## Technologies used:
 - HTML
@@ -10,7 +10,7 @@ Project was designed to design complex animations while maintianing UI, accessib
 ## Techniques
 
 - HTML Semantics
-- Accebility Aria
+- Accessibility Aria
 - Animations
 - Flex box
 - hover
