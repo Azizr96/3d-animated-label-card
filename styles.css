@@ -55,6 +55,8 @@ padding: 20px;
 }
 
 .card-outer {
+width: 280px;
+height: 380px;
 transform-style: preserve-3d;
 transition: transform 0.5s ease-in-out;
     
@@ -89,7 +91,7 @@ background: var(--front-cardcolor)
     border-radius: 20px;
 }
 
-.card-wrap:hover, .card-wrap:focus {
+.card-outer:hover, .card-outer:focus {
     transform: rotateY(180deg);
 }
 
@@ -220,4 +222,23 @@ button:hover, button:focus {
     text-transform: uppercase;
     color: gray;
 
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-outer {
+        width:100%;
+    }
+
+    .card-wrap {
+        width: 100%;
+    
+    }
 }
