@@ -18,6 +18,7 @@ Project was designed to design complex animations while maintianing UI, Accessib
 - transform-style
 - back-face-visibility 
 - mobile responsivness
+- animation bug repairing
 
 ## How to view
 
